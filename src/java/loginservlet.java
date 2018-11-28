@@ -36,31 +36,16 @@ public class loginservlet extends HttpServlet {
       if(user_name.equals(s1)&&user_pass.equals(s2))
                   {
                     out.print("Welcome "+ s1+"\n"); flag=1; 
-                    HttpSession session=request.getSession();  
+                    HttpSession session=request.getSession(); 
+                    session.setAttribute("uname",user_name);
                     session.setAttribute("s_id",user_pass);
-                    response.sendRedirect("MAIN.html");
+              
+
+                    response.sendRedirect("Main_new.jsp");
                      
                      break;
                   }
               }
-              
-//              ResultSet rs2 =  st.executeQuery("Select * from details");
-//              while(rs2.next())
-//              {          
-//                  s1=rs2.getString("name");               
-//                  s2=rs2.getString("pass");
-//
-//      if(user_name.equals(s1)&&user_pass.equals(s2))
-//                  {
-//                     out.print("Welcome "+ s1+"\n");
-//                     HttpSession session=request.getSession();  
-//                     session.setAttribute("s_id",user_pass);
-//                     response.sendRedirect("MAIN.html");
-//                     
-//             flag=1;
-//                     break;
-//                  }
-//              }
                if (flag==0)
               { 
                   response.sendRedirect("error.html");
@@ -74,42 +59,40 @@ public class loginservlet extends HttpServlet {
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
+// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+/**
+* Handles the HTTP <code>GET</code> method.
+*
+* @param request servlet request
+* @param response servlet response
+* @throws ServletException if a servlet-specific error occurs
+* @throws IOException if an I/O error occurs
+*/
+@Override
+protected void doGet(HttpServletRequest request, HttpServletResponse response)
+throws ServletException, IOException {
+processRequest(request, response);
+}
+/**
+* Handles the HTTP <code>POST</code> method.
+*
+* @param request servlet request
+* @param response servlet response
+* @throws ServletException if a servlet-specific error occurs
+* @throws IOException if an I/O error occurs
+*/
+@Override
+protected void doPost(HttpServletRequest request, HttpServletResponse response)
+throws ServletException, IOException {
+processRequest(request, response);
+}
+/**
+* Returns a short description of the servlet.
+*
+* @return a String containing servlet description
+*/
+@Override
+public String getServletInfo() {
+return "Short description";
+}// </editor-fold>
 }

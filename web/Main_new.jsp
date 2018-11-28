@@ -1,3 +1,11 @@
+<%-- 
+    Document   : Main_new
+    Created on : Nov 19, 2018, 9:52:08 AM
+    Author     : hp
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
 <title>Quikr clone</title>
@@ -33,12 +41,26 @@ div.spacing {
 	padding-top: 50px;
     padding-right: 150px;
     padding-bottom: 50px;
-    padding-left: 150px;
+	}
+div.container
+	{
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	float: left;
+        width: 150px;
+        padding: 2px;
+        height: 100%; 
+        transition: font-size 0.3s ease;
 	}
   </style>
   
 </head>
 <body>
+     <%
+        String username = "";
+      HttpSession ss = request.getSession();
+      username = (String)session.getAttribute("uname");
+        %>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
   
@@ -47,7 +69,7 @@ div.spacing {
     </div>
 	
     <ul class="nav navbar-nav">
-        <li class="active"><a href="MAIN.html">Home</a></li>
+        <li class="active"><a href="Main_new.jsp">Home</a></li>
       <li><a href="sell_list.html">Sell</a></li>
       <li><a href="purchase.jsp">Purchase</a></li>
     </ul>
@@ -60,47 +82,72 @@ div.spacing {
 	</form>
 	
 	<ul class="nav navbar-nav navbar-right">
-    <li><a href="user_profile.jsp"><span class="glyphicon glyphicon-log-in"></span> Profile</a></li>
-	<li><button class="btn navbar-btn">Post Free Ad</button></li>
+    <li><a href="user_profile.jsp"><span class="glyphicon glyphicon-log-in"></span> <%=username%></a></li>
+     <li>&nbsp<button class="btn navbar-btn"><a href="passrecovery.html">Update Password</a></button></li>
+    <li>&nbsp<button class="btn navbar-btn"><a href="sell_list.html">Post Free Ad</a></button></li>
+     <li>&nbsp<button class="btn navbar-btn"><a href="logoutservlet">Logout</a></button>
 	</ul>
   </div>
 </nav>
   <div class="spacing">
   
+    <div class = "container">
+  <h4><a href="furniture.jsp">-Furniture & Decor</a></h4>
+ <hr>
+ <h4><a href="electronic.jsp">-Appliances,ACs</a></h4>
+ <hr>
+ <h4><a href="sell_list.html">-JOBS</a></h4>
+ <hr>
+ <h4><a href="used.jsp">-Cars</a></h4>
+ <hr>
+ <h4><a href="electronic.jsp">-Electronics</a></h4>
+ <hr>
+ <h4><a href="electronic.jsp">-Mobiles</a></h4>
+ <hr>
+ <h4><a href="#">-Bikes</a></h4>
+ <hr>
+<!--  <h4><a href="#">-Bikes</a></h4>-->
+  </div>
+      
 	<font face="sans-serif"  size="12" color="#24CBF0">WELCOME </font>
-	<font face="sans-serif"  size="8" color="#1EBD39">TO QUIKRR</font><br><br>
+        <font face="sans-serif"  size="8" color="#1EBD39">TO QUIKRR</font><br><hr><br>
 <div class="gallery"> 
   <img src="images\quikr.jpg" alt="5Terre" width="600" height="400">
-  </a>
+  
   <div class="desc">Quikr Bazar</div>
-  <center><a href ="sell_list.html">Sell Your Product</a><br><br>
-  <a href ="purchase.jsp">Buy Product</a></center>
+  <h4><a href ="furniture.jsp">-Furniture & Decor</a></h4>
+      <h4><a href ="electronic.jsp">-Electronic & Appliances</a></h4>
 </div>
 
 <div class="gallery"> 
   <img src="images\quikr.jpg" alt="5Terre" width="600" height="400">
   </a>
   <div class="desc">Quikr Cars</div>
-  <center><a href ="sell_list.html">Sell Your Car</a><br><br>
-  <a href ="#">Buy Car</a></center>
+  <h4><a href ="used.jsp">-Used Cars</a><h4>   
+    <h4><a href ="newcar.jsp">-New Cars</a></h4>
 </div>
 
 <div class="gallery"> 
   <img src="images\quikr.jpg" alt="5Terre" width="600" height="400">
   </a>
   <div class="desc">Quikr jobs</div>
-  <center><a href ="sell_list.html">Hire </a><br><br>
-  <a href ="#">Get Hired</a></center>
+  <h4><a href ="sell_list.html">-Full Time Jobs </a></h4>
+      <h4> <a href ="#">-Part Time Jobs</a></h4>
 </div>
 
 <div class="gallery"> 
   <img src="images\quikr.jpg" alt="5Terre" width="600" height="400">
   </a>
   <div class="desc">Quikr Mobiles</div>
-  <center><a href ="sell_list.html">Sell Your Mobile</a><br><br>
-  <a href ="#">Buy Mobile</a></center>
+  <h4><a href ="sell_list.html">-New Smartphones</a></h4>
+  <h4><a href ="#">-Second Hand Phones</a></h4>
 </div>
 
 </div>
 </body>
 </html>
+
+
+
+
+

@@ -12,7 +12,7 @@ public class logoutservlet extends HttpServlet {
             response.setContentType("text/html");  
             PrintWriter out=response.getWriter();  
               
-            request.getRequestDispatcher("index.html").include(request, response);  
+            request.getRequestDispatcher("index1.html").include(request, response);  
               
             HttpSession session=request.getSession();  
             session.invalidate();  

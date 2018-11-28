@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2018 at 11:08 AM
+-- Generation Time: Nov 28, 2018 at 03:02 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -21,6 +21,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `test`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buy`
+--
+
+CREATE TABLE `buy` (
+  `Name` varchar(20) NOT NULL,
+  `Email` varchar(30) NOT NULL,
+  `CNumber` int(12) NOT NULL,
+  `Address` varchar(40) NOT NULL,
+  `Pincode` int(6) NOT NULL,
+  `user_id` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `buy`
+--
+
+INSERT INTO `buy` (`Name`, `Email`, `CNumber`, `Address`, `Pincode`, `user_id`) VALUES
+('pankaj', 'pankajverma2378@gmail.com', 256498, 'fbdfe', 15661, 268),
+('ds', 'bhjjk', 2626, 'vjhhj', 126, 268);
 
 -- --------------------------------------------------------
 
@@ -51,10 +74,12 @@ INSERT INTO `cardir` (`CARNAME`, `PRICE`, `YOP`, `COLOR`, `S.NO`) VALUES
 --
 
 CREATE TABLE `car_dir2` (
+  `s_no` int(11) NOT NULL,
   `pname` varchar(15) NOT NULL,
   `pprice` int(15) NOT NULL,
   `pcolor` varchar(15) NOT NULL,
   `pyop` int(15) NOT NULL,
+  `Category` varchar(30) NOT NULL,
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -62,11 +87,12 @@ CREATE TABLE `car_dir2` (
 -- Dumping data for table `car_dir2`
 --
 
-INSERT INTO `car_dir2` (`pname`, `pprice`, `pcolor`, `pyop`, `user_id`) VALUES
-('i10', 100000, 'white', 2012, 222),
-('cr', 25, 'blue', 456, 257),
-('bolero', 200000, 'black', 2005, 268),
-('bolero', 200000, 'black', 2005, 268);
+INSERT INTO `car_dir2` (`s_no`, `pname`, `pprice`, `pcolor`, `pyop`, `Category`, `user_id`) VALUES
+(7, 'bolero', 200000, 'blue', 2005, 'Car', 268),
+(9, 'pc', 25000, 'black', 2010, 'Electronic', 268),
+(10, 'Table', 2500, 'brown', 2010, 'furniture', 268),
+(11, 'devjeet', 1234, 'white', 2000, 'Car', 268),
+(12, 'swift', 20000000, 'hjhk', 2045, 'Car', 268);
 
 -- --------------------------------------------------------
 
@@ -76,18 +102,17 @@ INSERT INTO `car_dir2` (`pname`, `pprice`, `pcolor`, `pyop`, `user_id`) VALUES
 
 CREATE TABLE `login` (
   `username` varchar(15) NOT NULL,
-  `pass` int(15) NOT NULL
+  `pass` int(15) NOT NULL,
+  `Fav_color` varchar(20) NOT NULL,
+  `Bname` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `login`
 --
 
-INSERT INTO `login` (`username`, `pass`) VALUES
-('milan', 222),
-('jain', 257),
-('pankaj', 268),
-('mishra', 365);
+INSERT INTO `login` (`username`, `pass`, `Fav_color`, `Bname`) VALUES
+('pankaj', 268, 'black', 'milan');
 
 --
 -- Indexes for dumped tables
@@ -100,10 +125,20 @@ ALTER TABLE `cardir`
   ADD PRIMARY KEY (`S.NO`);
 
 --
--- Indexes for table `login`
+-- Indexes for table `car_dir2`
 --
-ALTER TABLE `login`
-  ADD PRIMARY KEY (`pass`);
+ALTER TABLE `car_dir2`
+  ADD PRIMARY KEY (`s_no`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `car_dir2`
+--
+ALTER TABLE `car_dir2`
+  MODIFY `s_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

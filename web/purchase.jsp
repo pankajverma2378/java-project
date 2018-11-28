@@ -49,7 +49,7 @@
     </div>
 	
     <ul class="nav navbar-nav">
-        <li class="active"><a href="MAIN.html">Home</a></li>
+        <li class="active"><a href="Main_new.jsp">Home</a></li>
     </ul>
 	
 	<form class="navbar-form navbar-left" action="/action_page.php" method="post">
@@ -82,6 +82,8 @@
 <td>Product YOP</td>
 <td>Product color</td>
 <td>Product Listed By User:</td>
+<td>Product Category</td>
+
 </tr>
 <%
 try
@@ -100,8 +102,9 @@ while(rs.next())
 <tr><td><%=rs.getString("pname") %></td>
     <td><%=rs.getString("pprice") %></td>
 <td><%=rs.getString("pcolor") %></td>
-<td><%=rs.getString("pyop") %></td><td>
-    <%=rs.getString("user_id") %></td>
+<td><%=rs.getString("pyop") %></td>
+<td><%=rs.getString("user_id") %></td>
+<td><%=rs.getString("Category") %></td>
 </tr>
  <%
 }

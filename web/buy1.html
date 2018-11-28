@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <title>Enter Details</title>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -15,7 +17,7 @@
     </div>
 	
     <ul class="nav navbar-nav">
-        <li class="active"><a href="Main_new.jsp">Home</a></li>
+        <li class="active"><a href="MAIN.html">Home</a></li>
     </ul>
 	
 	<form class="navbar-form navbar-left" action="/action_page.php" method="post">
@@ -34,19 +36,16 @@
     
 <center>
     <table>
-    <form action="sell_list" method="post">
-        <table>
-        <fieldset>      
-            <legend>Enter Details :</legend>
-            <tr><td><label>Product Name:</label></td><td> <input type="text" name="p_name" required></td></tr>
-            <tr><td><label>Product Price:</label></td><td><input type="text" name="p_price" required></td></tr>
-            <tr><td><label>Year of Purchase:</label></td> <td><input type="text" name="p_yop" required></td></tr>
-            <tr><td><label>Color:</label></td><td> <input type="text" name="p_color" required></td></tr>
-            <tr><td><label>Category:</label></td> <td><input type="text" name="p_category" required></td></tr>
-            <tr><td> <input type="submit"></td></tr>
-        </fieldset>
-        </table>
-</form>
+    <form action="ThankYou.html" method="post">
+           
+            <tr><legend>Enter Details :</legend></tr>
+            <tr><td> Name:</td><td><input type="text" name="cname" required></td></tr>
+            <tr><td>Email:</td><td> <input type="text" name="cemail" required></tr>
+            <tr><td>Contact Number:</td><td> <input type="text" name="cnum" required></td></tr>
+            <tr><td>Address:</td><td><input type="text" name="caddress" required></td></tr>
+            <tr><td>PinCode:</td><td><input type="text" name="cpin" required></td></tr>
+            <tr><td><input type="submit"></td></tr>
+      </form>
     </table>
 </center>
 </body>

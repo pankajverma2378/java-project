@@ -1,7 +1,12 @@
 <!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html lang="en">
 <head>
-	<title>Login V1</title>
+	<title>Enter Security Ans</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -22,70 +27,33 @@
 <!--===============================================================================================-->
 </head>
 <body>
-<!--    <script>
-        function myfunc(){
-            alert("Not Found");
-        }
-    </script>-->
-	<div class="limiter">
+<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
 					<img src="images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form" action="signupservlet" method="post">
+				<form class="login100-form validate-form" action="passrecovery.jsp" method="post">
 					<span class="login100-form-title">
-						Sign-Up
+						Recover Pass
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="sign_name" placeholder="Enter Username">
+					<div class="wrap-input100 validate-input" data-validate = "Valid username is rquired">
+						<input class="input100" type="text" name="newpass" placeholder="Enter new Pass">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="sign_pass" placeholder="Enter Password">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-lock" aria-hidden="true"></i>
-						</span>
-					</div>
-                                    
-					<div class="wrap-input100 validate-input" data-validate = "Valid DOB required">
-						<input class="input100" type="text" name="sign_dob" placeholder="Enter Date of Birth">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-lock" aria-hidden="true"></i>
-						</span>
-					</div>
-                                    <span class="login100-form-title">
-                                    Sequrity Questions
-					</span>
-                                    <div class="wrap-input100 validate-input" data-validate = "Enter Color please">
-						<input class="input100" type="text" name="color" placeholder="Enter Your fav Color">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-lock" aria-hidden="true"></i>
-						</span>
-					</div>
-                                    <div class="wrap-input100 validate-input" data-validate = "Enter name required">
-						<input class="input100" type="text" name="bname" placeholder="Enter your Best frnd Name">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-lock" aria-hidden="true"></i>
-						</span>
-					</div>
+	
 					
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							Sign Up
+							Done
 						</button>
-					</div>
-
+                                        </div>
 				</form>
 			</div>
 		</div>

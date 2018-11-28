@@ -16,6 +16,14 @@
         <servlet-name>sell_list</servlet-name>
         <servlet-class>sell_list</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>buy</servlet-name>
+        <servlet-class>buy</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>passrecovery</servlet-name>
+        <servlet-class>passrecovery</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>loginservlet</servlet-name>
         <url-pattern>/loginservlet</url-pattern>
@@ -31,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>sell_list</servlet-name>
         <url-pattern>/sell_list</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>buy</servlet-name>
+        <url-pattern>/buy</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>passrecovery</servlet-name>
+        <url-pattern>/passrecovery</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

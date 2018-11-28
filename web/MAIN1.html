@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href=""/>
+<link rel="stylesheet" href="css/util.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/util.css">
+<link rel="stylesheet" type="text/css" href="css/util.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<style>
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+.mySlides {display:none}
+
+
+.slideshow-container {
+  max-width: 2200px; 
+  
+
+  
+  
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+
+<body>
+    <div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<button class="login100-form-btn">
+								<a href="logoutservlet"  >Logout</a>
+							</button>
+						</div>
+</div>
+<div align="right" id="txt"> </div>
+
+<p><img src="images\quikr.jpg" width="77" height="77" align="right"></p>
+<a href="">
+<img onmouseover="expand(this)" onmouseout="notexp(this)" src="images\quikr.jpg" width="84" height="84"></a>
+
+<font face="sans-serif"  size="12" color="#24CBF0">WELCOME </font>
+<font face="sans-serif"  size="8" color="#1EBD39">TO QUIKRR</font>
+
+
+
+<object width="1500" height="50" data=""></object>
+<br>
+<br>
+
+
+<center>
+
+<div onmouseover="color(this)" onmouseout="default1(this)"  id="btn1">
+<a onmouseover="color(this)" onmouseout="default1(this)" href="MAIN.html" >HOME</a>
+
+<a onmouseover="color(this)" onmouseout="default1(this)" href="sell_list.html">SELL</a>
+
+<a onmouseover="color(this)" onmouseout="default1(this)" href="purchase.jsp" >PURCHASE</a>
+
+<a onmouseover="color(this)" onmouseout="default1(this)" href="">CONTACT</a>
+
+<a onmouseover="color(this)" onmouseout="default1(this)" href="user_profile.jsp">PROFILE</a>
+
+</center></div>
+<br><br> 
+
+<table style="width:100%">
+ 
+  <tr height="100">
+    <td  align="center" >     <div id="abcd">
+                <p>Access to thousands <br>of qualified writers</p>
+                <p>Explore writers through reviews, <br>portfolios and past experience</p>
+                <p>No hidden charges. <br>100% transparent process</p>
+                
+              
+                <p>Automated Payments</p>
+				             </div>
+			
+			    <a href="" id="btn" >Get content</a>
+			
+			</td>
+			
+    <td>
+	
+	<div>
+<center>
+<div class="left" > 
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  
+  <img src="images\write.jpg" width="550"height="300">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="images\content1.jpg" width="550"height="300">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="images\CM.jpg" width="550"height="300">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="images\crypt.jpg" width="550"height="300">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="images\iphone.jpg" width="550"height="300">
+  
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>   
+</div>
+</div></td>
+    
+  </tr>
+  
+</table>
+
+<script >
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000);
+	
+}
+
+</script>
+
+
+</body>
+</html>
